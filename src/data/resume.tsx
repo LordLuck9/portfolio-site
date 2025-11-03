@@ -5,9 +5,9 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Bhagyesh Acharya",
   initials: "BA",
-  url: "https://portfolio-site-neon-nu.vercel.app/",
-  location: "Jacksonville, FL",
-  locationLink: "https://www.google.com/maps/place/Jacksonville,+FL",
+  url: "https://main.dt7rmve7zaf3g.amplifyapp.com",
+  location: "FL",
+  locationLink: "https://www.google.com/maps/place/FL",
   description:
     " a Technical Support Engineer.",
   summary:
