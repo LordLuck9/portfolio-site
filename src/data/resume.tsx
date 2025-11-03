@@ -132,7 +132,7 @@ export const DATA = {
       href: "https://www.odu.edu",
       degree: "Bachelor of Science in Biology",
       logoUrl: "/odu.jpg",
-      start: "",
+      start: "2013",
       end: "2018",
     },
   ],
