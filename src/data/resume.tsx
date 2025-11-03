@@ -9,9 +9,9 @@ export const DATA = {
   location: "Jacksonville, FL",
   locationLink: "https://www.google.com/maps/place/Jacksonville,+FL",
   description:
-    "Technical Support Engineer focused on modern endpoint management",
+    " a Technical Support Engineer.",
   summary:
-    "Technical Support Engineer with 4+ years of experience managing enterprise endpoint environments, troubleshooting complex technical issues, and delivering seamless end-user support. Skilled in Intune, Jamf Pro, Azure AD, and SQL. Proven ability to reduce resolution times, drive compliance, and improve onboarding processes for large organizations.",
+    "Technical Support Engineer specializing in enterprise endpoint management, cloud infrastructure, and technical troubleshooting. Proficient in Intune, Jamf Pro, Azure AD, and SQL.",
 
   avatarUrl: "/me.jpg",
 
@@ -34,7 +34,7 @@ export const DATA = {
 
   contact: {
     email: "bhagyeshacharya@gmail.com",
-    tel: "+1-571-241-9849",
+    tel: "+1-904-428-8889",
     social: {
       GitHub: {
         name: "GitHub",
@@ -52,13 +52,13 @@ export const DATA = {
         name: "X",
         url: "", // optional
         icon: Icons.x,
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",
         url: "mailto:bhagyeshacharya@gmail.com",
         icon: Icons.email,
-        navbar: false,
+        navbar: true,
       },
     },
   },

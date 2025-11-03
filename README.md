@@ -1,18 +1,12 @@
 <div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
+  <img alt="Portfolio Preview" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
 </div>
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+# Bhagyesh Acharya — Portfolio
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+My personal portfolio built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, **shadcn/ui**, and **Magic UI** — inspired by the open-source work of [Dillion Verma](https://dillion.io) and [Magic UI](https://magicui.design).
 
-# Features
-
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+🌐 **Live Site:** [https://yourdomain.com](https://yourdomain.com)
 
 # Getting Started Locally
 
