@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import Markdown from "react-markdown";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -75,7 +76,8 @@ export const ResumeCard = ({
                 )}
                 <ChevronRightIcon
                   className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                    "size-4 translate-x-0 transform transition-all duration-300 ease-out",
+                    "opacity-50 sm:opacity-0 sm:group-hover:translate-x-1 sm:group-hover:opacity-100",
                     isExpanded ? "rotate-90" : "rotate-0"
                   )}
                 />
@@ -98,9 +100,11 @@ export const ResumeCard = ({
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm"
+              className="mt-2 pr-6 pb-2 text-xs sm:text-sm"
             >
-              {description}
+              <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert prose-li:my-0.5 prose-ul:my-1 prose-ul:pl-4 sm:text-sm">
+                {description}
+              </Markdown>
             </motion.div>
           )}
         </div>

@@ -31,7 +31,7 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
+              <Avatar className="size-20 border sm:size-28">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
@@ -112,22 +112,14 @@ export default function Page() {
         </div>
       </section>
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-6 w-full">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
-                </p>
-              </div>
+            <div className="space-y-2">
+              <h2 className="text-xl font-bold">Projects</h2>
+              <p className="text-sm text-muted-foreground">
+                A few things I&apos;ve been building on the side — sites,
+                small tools, and weekend projects.
+              </p>
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
@@ -154,28 +146,21 @@ export default function Page() {
       </section>
 
       <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
-              </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me{" "}
-                <Link
-                  href={"mailto:bhagyeshacharya@gmail.com"}
-                  className="text-blue-500 hover:underline"
-                >
-                  an email
-                </Link>{" "}
-                and I&apos;ll respond whenever I can.
-              </p>
-            </div>
-          </BlurFade>
-        </div>
+        <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <div className="space-y-2">
+            <h2 className="text-xl font-bold">Contact</h2>
+            <p className="text-sm text-muted-foreground">
+              Want to chat? Shoot me{" "}
+              <Link
+                href={"mailto:bhagyeshacharya@gmail.com"}
+                className="text-blue-500 hover:underline"
+              >
+                an email
+              </Link>{" "}
+              and I&apos;ll get back when I can.
+            </p>
+          </div>
+        </BlurFade>
       </section>
     </main>
   );

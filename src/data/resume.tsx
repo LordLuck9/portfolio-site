@@ -6,24 +6,30 @@ export const DATA = {
   name: "Bhagyesh Acharya",
   initials: "BA",
   url: "https://main.dt7rmve7zaf3g.amplifyapp.com",
-  location: "FL",
-  locationLink: "https://www.google.com/maps/place/FL",
+  location: "Jacksonville, FL",
+  locationLink: "https://www.google.com/maps/place/Jacksonville,+FL",
   description:
-    " a Technical Support Engineer.",
+    "Technical Support Engineer focused on enterprise endpoint management, identity, and cloud infrastructure.",
   summary:
-    "Technical Support Engineer specializing in enterprise endpoint management, cloud infrastructure, and technical troubleshooting. Proficient in Intune, Jamf Pro, Azure AD, and SQL.",
+    "I support 2,000+ users across Windows and macOS at the American Institutes for Research, administering Microsoft Intune, Jamf Pro, and Azure AD/Entra ID. I work across endpoint management, identity and access, and secure cloud onboarding — and I write the SOPs and knowledge base articles that keep it all repeatable.",
 
   avatarUrl: "/me.jpg",
 
   skills: [
-    "Intune",
+    "Microsoft Intune",
     "Jamf Pro",
+    "Microsoft 365",
+    "Azure AD / Entra ID",
+    "Active Directory",
     "Windows",
     "macOS",
-    "Active Directory",
-    "SQL Server",
-    "Knowledge Base / SOPs",
     "Endpoint Security",
+    "Configuration Profiles",
+    "Compliance Policies",
+    "Device Enrollment",
+    "SQL Server",
+    "VPN",
+    "SOPs / Knowledge Base",
     "WordPress",
   ],
 
@@ -34,7 +40,7 @@ export const DATA = {
 
   contact: {
     email: "bhagyeshacharya@gmail.com",
-    tel: "+1-904-428-8889",
+    tel: "+1-571-241-9849",
     social: {
       GitHub: {
         name: "GitHub",
@@ -67,26 +73,26 @@ export const DATA = {
     {
       company: "American Institutes for Research",
       href: "https://www.air.org",
-      badges: ["Intune", "Jamf Pro", "macOS", "Windows", "SOPs"],
-      location: "Arlington, VA",
+      badges: ["Intune", "Jamf Pro", "Entra ID", "macOS", "Windows"],
+      location: "Arlington, VA / Remote",
       title: "Technical Support Engineer",
       logoUrl: "/air.png",
       start: "Apr 2023",
       end: "Present",
       description:
-        "Manage 2,000+ Windows and macOS devices using Intune & Jamf Pro to ensure security and compliance. Lead onboarding and setup projects into secure cloud environments. Develop and maintain knowledge base articles and SOPs.",
+        "- Provide enterprise help desk support for 2,000+ users across Windows, macOS, Microsoft 365, VPN, hardware, software, and account access.\n- Administer Microsoft Intune, Azure AD/Entra ID, and Jamf Pro — device management, security groups, role assignments, configuration profiles, and policy deployment.\n- Manage and troubleshoot enterprise endpoints across enrollment, application access, compliance settings, and user/device group targeting.\n- Onboard project teams into secure cloud project portals, building folders and workspaces aligned to data classification and security standards.\n- Provision user access to applications, folders, and cloud resources in partnership with project teams, IT Security, and internal stakeholders.\n- Author SOPs, knowledge base articles, troubleshooting docs, and IT Bulletin communications to standardize support and improve user guidance.",
     },
     {
       company: "American Institutes for Research",
       href: "https://www.air.org",
-      badges: ["Tier I/II", "Deployments", "Active Directory"],
+      badges: ["Tier I/II", "Active Directory", "Deployments"],
       location: "Arlington, VA",
       title: "Technical Support Specialist II & I",
       logoUrl: "/air.png",
       start: "Aug 2021",
       end: "Mar 2023",
       description:
-        "Provided Tier I & II support and served as escalation lead for 2,000+ users. Supported device imaging/deployments and AD account provisioning.",
+        "- Provided Tier I and Tier II support for 2,000+ users; progressed to escalation resource for recurring endpoint, account, deployment, and access issues.\n- Supported device imaging, deployments, Active Directory account provisioning, password resets, software installs, and onboarding/offboarding.",
     },
     {
       company: "Anthem, Inc.",
@@ -98,7 +104,7 @@ export const DATA = {
       start: "Jul 2019",
       end: "Oct 2019",
       description:
-        "Provided production support using Kanban workflows. Monitored daily data integration processes with SQL Server, maintaining accuracy and reliability.",
+        "- Provided production support and managed work through Kanban boards to ensure timely follow-up on operational issues.\n- Monitored daily data integration processes using SQL Server, supporting data accuracy, reliability, and escalation for business-critical workflows.",
     },
     {
       company: "Cherry Bekaert LLP",
@@ -110,7 +116,7 @@ export const DATA = {
       start: "Jan 2019",
       end: "Apr 2019",
       description:
-        "Enforced quality control during tax season by validating information captured from tax return automation software.",
+        "- Validated information captured from tax return automation software, supporting quality control during high-volume seasonal operations.",
     },
     {
       company: "ODUrent",
@@ -122,7 +128,7 @@ export const DATA = {
       start: "Aug 2018",
       end: "Oct 2018",
       description:
-        "Coordinated rent collection, tenant communications, and maintenance. Managed website content and property listings using WordPress.",
+        "- Coordinated tenant communication, rent collection, property maintenance, and WordPress listing updates to support day-to-day operations.",
     },
   ],
 
