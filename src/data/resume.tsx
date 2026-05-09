@@ -8,29 +8,40 @@ export const DATA = {
   url: "https://main.dt7rmve7zaf3g.amplifyapp.com",
   location: "Jacksonville, FL",
   locationLink: "https://www.google.com/maps/place/Jacksonville,+FL",
-  description:
-    "Technical Support Engineer focused on enterprise endpoint management, identity, and cloud infrastructure.",
+  description: "Technical Support Engineer.",
   summary:
-    "I support 2,000+ users across Windows and macOS at the American Institutes for Research, administering Microsoft Intune, Jamf Pro, and Azure AD/Entra ID. I work across endpoint management, identity and access, and secure cloud onboarding — and I write the SOPs and knowledge base articles that keep it all repeatable.",
+    "Technical Support Engineer with 4+ years supporting enterprise environments. Currently at the American Institutes for Research, where I manage Microsoft Intune, Jamf Pro, and Azure AD/Entra ID for 2,000+ Windows and macOS users, owning endpoint management, identity and access, and secure cloud onboarding.",
 
   avatarUrl: "/me.jpg",
 
-  skills: [
-    "Microsoft Intune",
-    "Jamf Pro",
-    "Microsoft 365",
-    "Azure AD / Entra ID",
-    "Active Directory",
-    "Windows",
-    "macOS",
-    "Endpoint Security",
-    "Configuration Profiles",
-    "Compliance Policies",
-    "Device Enrollment",
-    "SQL Server",
-    "VPN",
-    "SOPs / Knowledge Base",
-    "WordPress",
+  skillGroups: [
+    {
+      label: "Endpoint & Device Management",
+      items: [
+        "Microsoft Intune",
+        "Jamf Pro",
+        "Microsoft 365",
+        "Windows",
+        "macOS",
+        "Configuration Profiles",
+        "Compliance Policies",
+        "Device Enrollment",
+        "Endpoint Security",
+      ],
+    },
+    {
+      label: "Identity & Access",
+      items: [
+        "Azure AD / Entra ID",
+        "Active Directory",
+        "Security Groups",
+        "Role Assignments",
+      ],
+    },
+    {
+      label: "Other",
+      items: ["SQL Server", "VPN", "WordPress"],
+    },
   ],
 
   navbar: [
@@ -80,7 +91,7 @@ export const DATA = {
       start: "Apr 2023",
       end: "Present",
       description:
-        "- Provide enterprise help desk support for 2,000+ users across Windows, macOS, Microsoft 365, VPN, hardware, software, and account access.\n- Administer Microsoft Intune, Azure AD/Entra ID, and Jamf Pro — device management, security groups, role assignments, configuration profiles, and policy deployment.\n- Manage and troubleshoot enterprise endpoints across enrollment, application access, compliance settings, and user/device group targeting.\n- Onboard project teams into secure cloud project portals, building folders and workspaces aligned to data classification and security standards.\n- Provision user access to applications, folders, and cloud resources in partnership with project teams, IT Security, and internal stakeholders.\n- Author SOPs, knowledge base articles, troubleshooting docs, and IT Bulletin communications to standardize support and improve user guidance.",
+        "- Provide enterprise help desk support for 2,000+ users across Windows, macOS, Microsoft 365, VPN, hardware, software, and account access.\n- Administer Microsoft Intune, Azure AD/Entra ID, and Jamf Pro for device management, security groups, role assignments, configuration profiles, and policy deployment.\n- Manage and troubleshoot enterprise endpoints across enrollment, application access, compliance settings, and user/device group targeting.\n- Onboard project teams into secure cloud workspaces aligned to data classification and security standards.\n- Provision user access to applications, folders, and cloud resources in partnership with project teams, IT Security, and internal stakeholders.\n- Document recurring fixes and IT bulletins so the team can resolve issues faster.",
     },
     {
       company: "American Institutes for Research",
@@ -95,7 +106,7 @@ export const DATA = {
         "- Provided Tier I and Tier II support for 2,000+ users; progressed to escalation resource for recurring endpoint, account, deployment, and access issues.\n- Supported device imaging, deployments, Active Directory account provisioning, password resets, software installs, and onboarding/offboarding.",
     },
     {
-      company: "Anthem, Inc.",
+      company: "Elevance Health (formerly Anthem, Inc.)",
       href: "https://www.elevancehealth.com",
       badges: ["SQL Server", "Production Support", "Kanban"],
       location: "Norfolk, VA",
@@ -145,78 +156,68 @@ export const DATA = {
 
   projects: [
     {
-      title: "WhyDoIKnowThis",
-      href: "https://whydoiknowthis.com",
+      title: "Quantum Flash Solutions",
+      href: "https://quantumflashsolutions.com",
+      dates: "2025 – Present",
+      active: true,
+      description:
+        "Boutique digital agency I founded to help small businesses compete with modern web, marketing, and automation. Services span web design, local SEO, AI chatbots and lead-follow-up automation, and IT support, built on the enterprise IT background from my day job.",
+      technologies: [
+        "Next.js",
+        "TailwindCSS",
+        "Local SEO",
+        "AI Automation",
+        "Microsoft 365",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://quantumflashsolutions.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Trivia Nexus",
+      href: "https://main.d1onwqwztufavg.amplifyapp.com/",
       dates: "2025",
       active: true,
       description:
-        "A fun, modern trivia site for friends with category browsing and Netflix-style selection. Includes hard-mode question packs and JSON import/export for custom sets.",
+        "Trivia platform with category browsing, themed question packs, and a clean playable interface designed for quick rounds with friends.",
       technologies: [
         "Next.js",
         "TypeScript",
         "TailwindCSS",
-        "Vercel",
+        "AWS Amplify",
         "Framer Motion",
       ],
       links: [
         {
           type: "Website",
-          href: "https://whydoiknowthis.com",
+          href: "https://main.d1onwqwztufavg.amplifyapp.com/",
           icon: <Icons.globe className="size-3" />,
         },
-        // { type: "Source", href: "https://github.com/...", icon: <Icons.github className="size-3" /> },
       ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Flash Digital",
-      href: "#",
-      dates: "2024 – Present",
-      active: true,
-      description:
-        "Solo digital-marketing studio site: landing pages, SEO basics, and lightweight CMS edits for small businesses. Built reusable sections (hero, pricing, FAQ) and a components library.",
-      technologies: ["Next.js", "TailwindCSS", "Forms", "SSR"],
-      links: [
-        // TODO: add live URL when ready
-        { type: "Website", href: "#", icon: <Icons.globe className="size-3" /> },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "FlashTechSupport",
-      href: "#",
-      dates: "2024 – Present",
-      active: true,
-      description:
-        "Customer-facing site for IT support offerings (device setup, home networking, AV help). Simple intake form flows to route requests and auto-acknowledge via email.",
-      technologies: ["Next.js", "TailwindCSS", "Vercel", "Email Integrations"],
-      links: [{ type: "Website", href: "#", icon: <Icons.globe className="size-3" /> }],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Password Generator",
-      href: "#",
-      dates: "2024",
-      active: true,
-      description:
-        "Tiny web app to generate strong passwords with adjustable length, entropy meter, copy-to-clipboard, and client-only logic.",
-      technologies: ["React", "TypeScript", "Vite"],
-      links: [{ type: "Website", href: "#", icon: <Icons.globe className="size-3" /> }],
       image: "",
       video: "",
     },
     {
       title: "Reaction-Time Game",
-      href: "#",
+      href: "https://staging.d1aiz8pb9xezij.amplifyapp.com/",
       dates: "2024",
-      active: false,
+      active: true,
       description:
-        "A simple reflex tester with rounds, leaderboard stub, and mobile haptics. Good playground for animations and state machines.",
-      technologies: ["React", "TypeScript", "Framer Motion"],
-      links: [{ type: "Website", href: "#", icon: <Icons.globe className="size-3" /> }],
+        "Reflex tester with timed rounds, local leaderboard, and mobile haptics. Built to explore animations and state machines.",
+      technologies: ["React", "TypeScript", "Framer Motion", "AWS Amplify"],
+      links: [
+        {
+          type: "Website",
+          href: "https://staging.d1aiz8pb9xezij.amplifyapp.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
       image: "",
       video: "",
     },

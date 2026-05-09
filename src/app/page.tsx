@@ -9,28 +9,29 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
-const BLUR_FADE_DELAY = 0.04;
+const HEADING_DELAY = 0;
+const CONTENT_DELAY = 0.08;
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex flex-col min-h-[100dvh] space-y-8 sm:space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
+          <div className="flex flex-col-reverse items-start gap-4 sm:flex-row sm:justify-between sm:gap-2">
+            <div className="flex flex-1 flex-col space-y-1.5">
               <BlurFadeText
-                delay={BLUR_FADE_DELAY}
+                delay={0}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
-                delay={BLUR_FADE_DELAY}
+                delay={0.05}
                 text={DATA.description}
               />
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
+            <BlurFade delay={0}>
               <Avatar className="size-20 border sm:size-28">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
@@ -40,10 +41,10 @@ export default function Page() {
         </div>
       </section>
       <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+        <BlurFade delay={HEADING_DELAY}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+        <BlurFade delay={CONTENT_DELAY}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
@@ -51,83 +52,92 @@ export default function Page() {
       </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <BlurFade delay={HEADING_DELAY}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
-          {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
-              <ResumeCard
-                key={work.company}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
-              />
-            </BlurFade>
-          ))}
+          <BlurFade delay={CONTENT_DELAY}>
+            <div className="flex flex-col gap-y-3">
+              {DATA.work.map((work) => (
+                <ResumeCard
+                  key={`${work.company}-${work.start}`}
+                  logoUrl={work.logoUrl}
+                  altText={work.company}
+                  title={work.company}
+                  subtitle={work.title}
+                  href={work.href}
+                  badges={work.badges}
+                  period={`${work.start} - ${work.end ?? "Present"}`}
+                  description={work.description}
+                />
+              ))}
+            </div>
+          </BlurFade>
         </div>
       </section>
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <BlurFade delay={HEADING_DELAY}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
-          {DATA.education.map((education, id) => (
-            <BlurFade
-              key={education.school}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
-              <ResumeCard
-                key={education.school}
-                href={education.href}
-                logoUrl={education.logoUrl}
-                altText={education.school}
-                title={education.school}
-                subtitle={education.degree}
-                period={`${education.start} - ${education.end}`}
-              />
-            </BlurFade>
-          ))}
+          <BlurFade delay={CONTENT_DELAY}>
+            <div className="flex flex-col gap-y-3">
+              {DATA.education.map((education) => (
+                <ResumeCard
+                  key={education.school}
+                  href={education.href}
+                  logoUrl={education.logoUrl}
+                  altText={education.school}
+                  title={education.school}
+                  subtitle={education.degree}
+                  period={`${education.start} - ${education.end}`}
+                />
+              ))}
+            </div>
+          </BlurFade>
         </div>
       </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <BlurFade delay={HEADING_DELAY}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
-          </div>
+          <BlurFade delay={CONTENT_DELAY}>
+            <div className="flex flex-col gap-y-3">
+              {DATA.skillGroups.map((group) => (
+                <div key={group.label} className="space-y-1.5">
+                  <div className="text-xs font-medium text-muted-foreground">
+                    {group.label}
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {group.items.map((skill) => (
+                      <Badge
+                        className="text-[11px] sm:text-xs"
+                        key={skill}
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </BlurFade>
         </div>
       </section>
       <section id="projects">
         <div className="space-y-6 w-full">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <BlurFade delay={HEADING_DELAY}>
             <div className="space-y-2">
               <h2 className="text-xl font-bold">Projects</h2>
               <p className="text-sm text-muted-foreground">
-                A few things I&apos;ve been building on the side — sites,
-                small tools, and weekend projects.
+                Sites, tools, and side projects I&apos;ve built outside of
+                work.
               </p>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
+          <BlurFade delay={CONTENT_DELAY}>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+              {DATA.projects.map((project) => (
                 <ProjectCard
                   href={project.href}
                   key={project.title}
@@ -139,14 +149,14 @@ export default function Page() {
                   video={project.video}
                   links={project.links}
                 />
-              </BlurFade>
-            ))}
-          </div>
+              ))}
+            </div>
+          </BlurFade>
         </div>
       </section>
 
       <section id="contact">
-        <BlurFade delay={BLUR_FADE_DELAY * 16}>
+        <BlurFade delay={HEADING_DELAY}>
           <div className="space-y-2">
             <h2 className="text-xl font-bold">Contact</h2>
             <p className="text-sm text-muted-foreground">
